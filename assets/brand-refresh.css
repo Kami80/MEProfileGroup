@@ -1,0 +1,134 @@
+/* MEP Group — Aurora Pearl palette (2026). Final, intentional color layer. */
+:root {
+  --navy:#081e2d; --navy2:#123d4c; --navy3:#1b5964;
+  --ink:#142f3c; --paper:#f5f8f6; --ivory:#fcfbf7; --white:#fff;
+  --gold:#e4c087; --gold2:#b28c54; --muted:#587381;
+  --border:rgba(99,145,152,.22);
+  --shadow:0 24px 56px rgba(10,42,51,.095),0 3px 12px rgba(10,42,51,.035);
+  --mep-cream:#fff9ef; --mep-aqua:#73c3bc; --mep-deep:#092735;
+  --mep-ink:#16333c; --mep-gold:#e2bd7b;
+}
+html{scrollbar-color:#8ca9a7 #f4f8f6}
+body{background:#f5f8f6;background-image:radial-gradient(circle at 8% 12%,rgba(167,218,211,.20),transparent 34%),radial-gradient(circle at 91% 37%,rgba(230,190,126,.10),transparent 32%)}
+::selection{background:#f3dba9;color:#122b35}
+/* Chromatic steel: dark spruce, deeper marine, and subdued champagne. */
+.utility{background:#061923;color:#a7c2ca}
+.utility .utility-dot{background:#e9c78b;box-shadow:0 0 10px rgba(233,199,139,.5)}
+.site-header.nav-refined{background:linear-gradient(112deg,rgba(6,27,39,.965),rgba(12,49,59,.955) 65%,rgba(13,45,55,.96));border-bottom:1px solid rgba(169,212,208,.16);box-shadow:0 8px 34px rgba(2,20,29,.16)}
+.nav-refined.header-scrolled{background:linear-gradient(110deg,rgba(5,24,35,.99),rgba(12,47,56,.985))}
+.nav-refined .main-nav{background:linear-gradient(125deg,rgba(205,241,236,.09),rgba(255,255,255,.04));border-color:rgba(192,228,219,.17)}
+.nav-refined .main-nav a{color:#e1eeee}.nav-refined .main-nav a:hover{background:rgba(159,212,204,.15)}
+.nav-refined .main-nav a.is-section-active{color:#ffe5b4;background:linear-gradient(120deg,rgba(227,185,114,.25),rgba(221,244,236,.08))}
+.nav-refined .nav-language{border-color:rgba(174,216,211,.31);color:#f5fbf9}
+.nav-refined .nav-quote,.button-primary,.header-cta{background:linear-gradient(125deg,#f9e4b7 0%,#e9c487 50%,#d5a96d 100%);color:#19333b;box-shadow:inset 0 1px rgba(255,255,255,.78),0 9px 24px rgba(214,173,100,.15)}
+.button-primary:hover,.nav-refined .nav-quote:hover{box-shadow:inset 0 1px rgba(255,255,255,.8),0 15px 32px rgba(213,169,99,.27)}
+.button-dark{background:linear-gradient(125deg,#133d4c,#0a2938);color:#fff}
+.text-link{color:#a47c42}
+.text-link:hover{color:#835c2b}
+a:focus-visible,button:focus-visible{outline-color:#90e4d5}
+/* Make the brand hero luminous without losing rich blue-black contrast. */
+.hero,.detail-hero{background:
+ radial-gradient(ellipse 70% 90% at 95% 4%,rgba(55,122,130,.35),transparent 67%),
+ radial-gradient(ellipse 50% 60% at 12% 96%,rgba(52,103,112,.27),transparent 72%),
+ radial-gradient(ellipse 46% 58% at 48% 30%,rgba(233,184,105,.075),transparent 76%),
+ linear-gradient(127deg,#061924 0%,#0b293a 53%,#164452 100%)}
+.hero:before{opacity:.16}
+.hero h1 em{color:#f2d39e;text-shadow:0 8px 38px rgba(239,192,122,.10)}
+.hero .eyebrow{background:rgba(153,202,198,.105);border-color:rgba(176,218,212,.22);color:#f3d49d}
+.hero p,.detail-hero p{color:#d2e5e6}
+.hero-visual:before{background:radial-gradient(circle,rgba(104,190,182,.21),rgba(226,184,114,.13) 48%,transparent 74%)}
+.hero-visual img{filter:saturate(.87) contrast(1.065) brightness(.97)}
+.hero-float{background:linear-gradient(145deg,rgba(20,62,70,.88),rgba(5,27,41,.86));border-color:rgba(214,241,230,.25)}
+.hero-statline{background:rgba(192,235,221,.035)}
+.hero-stat{background:rgba(207,244,233,.06)!important;border-color:rgba(209,239,228,.14)!important}
+.hero-stat b{color:#f2cf8e}
+.marquee{background:linear-gradient(100deg,#caa06c,#f4d59f 50%,#c89a62);color:#173039}
+/* Alternating warm pearl / cool mineral backgrounds give the page more rhythm. */
+.products-section{background:linear-gradient(165deg,#f5f8f6 0%,#fffefa 54%,#f1f6f3 100%)}
+.catalog-section{background:radial-gradient(ellipse 60% 85% at 99% 0%,rgba(179,221,208,.30),transparent 65%),linear-gradient(140deg,#eaf4f1,#f4f8f6 63%,#f1f4ed)}
+.about-section,.team-section{background:#fffdfa}
+.partner-band{background:linear-gradient(110deg,#e9f2ed,#f7f4ea 53%,#e6f1ee);border-color:rgba(114,163,152,.20)}
+.global-section{background:radial-gradient(ellipse at 7% 19%,rgba(175,225,215,.24),transparent 55%),#f4f8f5}
+.faq-section{background:linear-gradient(135deg,#eaf4f0,#f7f8f3 72%)}
+.detail-section{background:#fbfcf9}.related-section{background:linear-gradient(145deg,#eaf4f0,#f5f7f2)}
+.section-heading h2,.team-layout h2,.detail-layout h2,.product-content h3{color:#153640}
+.section-heading p,.about-copy p,.global-copy p{color:#546f76}
+/* Gold rim catches natural light while soft sea glass stays quiet. */
+.product-card,.catalog-panel,.leader,.detail-side{background:linear-gradient(145deg,rgba(255,255,254,.97),rgba(251,252,248,.90) 58%,rgba(226,242,236,.77));border:1px solid rgba(255,255,255,.93);box-shadow:inset 0 1px rgba(255,255,255,.95),0 20px 50px rgba(19,65,70,.09),0 2px 13px rgba(9,35,44,.035)}
+.product-card:hover,.catalog-panel:hover{border-color:rgba(211,171,105,.62);box-shadow:0 30px 68px rgba(14,60,67,.14),inset 0 1px #fff}
+.product-art{background:linear-gradient(135deg,#153a49,#255d61)}
+.product-art img{filter:saturate(.9) contrast(1.06)}
+.product-card:hover .product-art img{filter:saturate(1.02) contrast(1.06)}
+.product-content p,.detail-layout p{color:#5b747c}
+.catalog-ident img{background:#1d5760}
+.catalog-guide{color:#966b32!important}
+.spec-chip.spec-action{background:linear-gradient(145deg,#fffefa,#eaf3ef);border-color:rgba(142,183,174,.35);color:#244850}
+.spec-chip.spec-action:hover{background:linear-gradient(145deg,#fff3db,#ebf6f1);border-color:#d4ad73}
+.spec-chip.spec-action.is-chosen{background:linear-gradient(135deg,#ffedca,#f7faf3);border-color:#bd8b4b;color:#60441d}
+.about-number{color:#f7d99d}.milestone b{color:#1c4e56}
+.partner-item{background:rgba(255,255,251,.63);border-color:rgba(255,255,255,.92)}
+.values-section{background:radial-gradient(ellipse at 93% 0%,rgba(62,133,126,.31),transparent 60%),linear-gradient(125deg,#07202d,#10414b)}
+.value{background:rgba(215,242,232,.07)}.value:hover{background:rgba(220,245,237,.12)}
+.value-icon{background:rgba(210,240,231,.11)}
+.global-point{color:#224653;background:rgba(255,255,252,.83);border-color:rgba(121,161,157,.20)}
+.global-art.global-art-interactive{background:radial-gradient(circle at 51% 48%,rgba(39,133,139,.47),transparent 53%),radial-gradient(circle at 45% 51%,rgba(222,174,106,.11),transparent 70%),linear-gradient(155deg,#051924,#0c3442 53%,#092a36);border-color:rgba(194,240,220,.20)}
+.globe-control{background:rgba(14,55,64,.80)}
+.globe-control:hover{background:rgba(29,87,94,.97)}
+.faq-list details{background:rgba(255,255,252,.75);border-color:rgba(255,255,255,.95)}
+.faq-list details[open]{background:#fffefa;border-color:rgba(219,183,126,.46)}
+.faq-list details p{color:#536e74}
+/* Warm navy + clean pearl form; same accent across all interactive elements. */
+.contact-section{background:radial-gradient(ellipse 64% 90% at 0% 10%,rgba(50,128,130,.32),transparent 70%),linear-gradient(130deg,#071d2a,#123c49)}
+.contact-cell{background:linear-gradient(140deg,rgba(224,247,239,.095),rgba(255,255,255,.045));border-color:rgba(208,240,226,.18)}
+.contact-cell h3{color:#f3d39b}
+.inquiry-section{background:radial-gradient(ellipse 55% 80% at 0% 25%,rgba(43,129,130,.30),transparent 76%),radial-gradient(ellipse at 92% 94%,rgba(234,187,117,.10),transparent 58%),linear-gradient(134deg,#061d2b,#103d49)}
+.inquiry-copy>p{color:#d1e1e1}.inquiry-mini{color:#f0cd95}
+.inquiry-form{background:linear-gradient(140deg,rgba(255,255,251,.985),rgba(241,249,244,.975) 70%,rgba(224,242,236,.96));border-color:rgba(255,255,255,.96);color:#173a43;box-shadow:inset 0 1px #fff,0 38px 80px rgba(0,19,25,.25)}
+.inquiry-form .form-title{color:#143e48}.inquiry-form .field label{color:#3e656b}.inquiry-form .form-notice{color:#567076}
+.field :is(input,select,textarea){background:#fff;box-shadow:inset 0 1px 3px rgba(11,51,56,.025)}
+.field :is(input,select,textarea):focus{border-color:#c69b5e;box-shadow:0 0 0 4px rgba(217,178,112,.2),inset 0 1px 2px rgba(15,45,52,.05)}
+.spec-selection.has-selection{background:linear-gradient(110deg,#fff5df,#edf7f3)}
+.site-footer{background:#061923}
+/* Direct-contact strips: accessible, tappable, calm—not competing with the main CTA. */
+.mep-quick-contact{margin-top:22px;padding:17px;border-radius:22px;position:relative;overflow:hidden}
+.mep-quick-contact::before{content:"";position:absolute;inset:0 0 auto;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.55),transparent);pointer-events:none}
+.mep-quick-caption{display:block;font-size:12px;font-weight:700;line-height:1.8;margin-bottom:12px}
+/* Keep the accessible icon, action label, and phone number in separate grid cells.
+   This avoids the previous single-line overflow at tablet and narrow sidebar widths. */
+.mep-quick-links{display:flex;gap:10px;align-items:stretch;flex-wrap:wrap;min-width:0}
+.mep-quick-link{display:grid;grid-template-columns:20px minmax(0,1fr);grid-template-rows:auto auto;align-content:center;align-items:center;column-gap:11px;row-gap:3px;flex:1 1 190px;min-width:0;min-height:72px;padding:11px 13px;border-radius:16px;text-decoration:none!important;border:1px solid transparent;transition:transform .28s cubic-bezier(.2,.86,.22,1),background .2s ease,border-color .2s ease,box-shadow .2s ease}
+.mep-quick-link img{grid-column:1;grid-row:1/3;align-self:center;width:20px;height:20px;object-fit:contain}
+.mep-quick-link span{grid-column:2;grid-row:1;min-width:0;font-weight:750;font-size:12px;line-height:1.4;white-space:normal}
+.mep-quick-link bdi{grid-column:2;grid-row:2;min-width:0;display:block;justify-self:start;font:700 12px/1.5 Arial,Tahoma,sans-serif;white-space:nowrap;letter-spacing:0;direction:ltr;unicode-bidi:isolate}
+/* The product detail sidebar is a narrower container even on a wide viewport. */
+.detail-side .mep-quick-link{flex-basis:190px}
+@media(max-width:365px){.mep-quick-link{flex-basis:100%}}
+.mep-quick-link:hover{transform:translateY(-2px)}.mep-quick-link:active{transform:scale(.985);transition-duration:.08s}
+.mep-quick-link:focus-visible{outline:3px solid #eed099;outline-offset:2px}
+.mep-quick-contact-inquiry{background:linear-gradient(137deg,rgba(209,244,233,.105),rgba(255,255,255,.045));border:1px solid rgba(195,232,222,.20);box-shadow:inset 0 1px rgba(255,255,255,.12),0 9px 25px rgba(0,16,23,.08)}
+.mep-quick-contact-inquiry .mep-quick-caption{color:#ebdec3}
+.mep-quick-contact-inquiry .mep-quick-link{color:#f3f9f5;background:rgba(227,246,240,.09);border-color:rgba(203,236,227,.24)}
+.mep-quick-contact-inquiry .mep-quick-link:hover{background:rgba(225,245,239,.16);border-color:rgba(230,190,123,.55)}
+.mep-quick-contact-detail{background:linear-gradient(132deg,rgba(230,244,238,.91),rgba(255,250,240,.92));border:1px solid rgba(144,184,172,.31);box-shadow:inset 0 1px #fff}
+.mep-quick-contact-detail::before{background:linear-gradient(90deg,transparent,rgba(211,168,99,.56),transparent)}
+.mep-quick-contact-detail .mep-quick-caption{color:#537178}
+.mep-quick-contact-detail .mep-quick-link{color:#17404a;background:rgba(255,255,255,.78);border-color:rgba(166,196,183,.41);box-shadow:inset 0 1px #fff}
+.mep-quick-contact-detail .mep-quick-link:hover{background:#fff;border-color:#d0aa70;box-shadow:0 7px 18px rgba(17,67,69,.08)}
+/* Slightly firmer contrast for glass widget colors, in theme. */
+.mep-contact-fab{background:linear-gradient(140deg,#fae1b1,#e4be7e 60%,#c29457)}
+.mep-contact-panel{background:linear-gradient(142deg,rgba(255,255,252,.985),rgba(240,248,244,.975) 52%,rgba(228,243,237,.975));color:#153d44}
+.mep-contact-channel{background:rgba(255,255,252,.8);border-color:rgba(154,187,178,.31)}
+.mep-contact-channel:hover{border-color:rgba(215,167,99,.5)}
+.mep-contact-channel strong{color:#163b43}
+.mep-contact-footer{background:rgba(211,232,223,.46);border-color:rgba(129,169,157,.20)}
+@media(max-width:620px){
+ .mep-quick-contact{padding:13px;border-radius:18px;margin-top:17px}
+ .mep-quick-links{gap:7px}
+ .mep-quick-link{flex-basis:100%;min-height:66px;padding:11px 13px;column-gap:11px;row-gap:2px}
+ .mep-quick-link bdi{margin-inline-start:0}
+ .inquiry-copy .mep-quick-contact{max-width:100%}
+ .detail-side .mep-quick-contact{margin-top:18px}
+}
+@media(prefers-reduced-transparency:reduce){.mep-quick-contact-inquiry{background:#153c48}.mep-quick-contact-detail{background:#eef4ec}.inquiry-form{background:#fffefa}}
+@media(prefers-contrast:more){.mep-quick-contact-inquiry{background:#0b2b36;border:2px solid #fff}.mep-quick-contact-inquiry .mep-quick-link{border:1px solid white}.mep-quick-contact-detail{background:#fff;border:2px solid #244952}.mep-quick-contact-detail .mep-quick-link{border:1px solid #244952}}
+@media(prefers-reduced-motion:reduce){.mep-quick-link{transition:none!important;transform:none!important}}

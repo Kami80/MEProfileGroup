@@ -1,0 +1,118 @@
+{
+  "company_name_fa": "پویا پروفیل خاورمیانه",
+  "company_name_en": "Pouya Middle East Profile Holding",
+  "brand": "MEProfile Group",
+  "formal_start_year_solar_hijri": 1404,
+  "partners_fa": [
+    "پارسین تیسفون ایلیا",
+    "کارا فلز سرمد"
+  ],
+  "manufacturing_facilities": 4,
+  "central_warehouse": "پارسین فلز",
+  "founders_independent_experience_years_more_than": 10,
+  "intergenerational_industry_heritage_years_more_than": 50,
+  "leaders_fa": [
+    "مجید مایگانه",
+    "علی طاهرخانی",
+    "اشکان شیرمحمدلو"
+  ],
+  "products": [
+    "steel tubes",
+    "square hollow sections",
+    "rectangular hollow sections"
+  ],
+  "markets": [
+    "Iran",
+    "international export inquiries"
+  ],
+  "homepage_fa": "index.html",
+  "homepage_en": "en/index.html",
+  "listed_product_sizes": {
+    "square-profiles": [
+      "20×20×1.8",
+      "20×20×2",
+      "25×25×2",
+      "30×30×1.8",
+      "30×30×2",
+      "40×40×2",
+      "60×60×2",
+      "70×70×2",
+      "70×70×2.5",
+      "90×90×2.5",
+      "90×90×2.8",
+      "100×100×2"
+    ],
+    "rectangular-profiles": [
+      "25×10×2",
+      "30×20×2",
+      "40×20×2",
+      "50×30×2",
+      "60×30×1.6",
+      "60×30×2",
+      "60×30×2.5",
+      "60×40×2",
+      "80×40×2",
+      "100×40×2"
+    ],
+    "steel-pipes": [
+      "32",
+      "50"
+    ],
+    "french-frame": [
+      "French frame / چهارچوب فرانسوی"
+    ]
+  },
+  "contact": {
+    "phones": [
+      "02122411100",
+      "02122411122",
+      "02122411133",
+      "02122411155"
+    ],
+    "whatsapp": "+989359995122",
+    "whatsapp_link": "https://wa.me/989359995122",
+    "whatsapp_channel": "https://whatsapp.com/channel/0029VbD4sCb5K3zSHkTDbp0c",
+    "rubika": "https://rubika.ir/meprofilegroup",
+    "instagram": "https://www.instagram.com/meprofilegroup_fa/",
+    "instagram_handle": "@meprofilegroup_fa"
+  },
+  "office_address_fa": "ولنجک، خیابان سیزدهم فرهنگ، مرکز خرید گالریا، طبقه سوم اداری، واحد ۵",
+  "indexed_specification_pages": [
+    {
+      "size_mm": "20×20×2",
+      "category": "square-profiles",
+      "fa_url": "./specifications/square-20x20x2/",
+      "en_url": "./en/specifications/square-20x20x2/"
+    },
+    {
+      "size_mm": "40×40×2",
+      "category": "square-profiles",
+      "fa_url": "./specifications/square-40x40x2/",
+      "en_url": "./en/specifications/square-40x40x2/"
+    },
+    {
+      "size_mm": "60×60×2",
+      "category": "square-profiles",
+      "fa_url": "./specifications/square-60x60x2/",
+      "en_url": "./en/specifications/square-60x60x2/"
+    },
+    {
+      "size_mm": "30×20×2",
+      "category": "rectangular-profiles",
+      "fa_url": "./specifications/rectangular-30x20x2/",
+      "en_url": "./en/specifications/rectangular-30x20x2/"
+    },
+    {
+      "size_mm": "60×30×2",
+      "category": "rectangular-profiles",
+      "fa_url": "./specifications/rectangular-60x30x2/",
+      "en_url": "./en/specifications/rectangular-60x30x2/"
+    },
+    {
+      "size_mm": "60×40×2",
+      "category": "rectangular-profiles",
+      "fa_url": "./specifications/rectangular-60x40x2/",
+      "en_url": "./en/specifications/rectangular-60x40x2/"
+    }
+  ]
+}
