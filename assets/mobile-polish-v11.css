@@ -176,14 +176,14 @@
   .team-layout>div:first-child p { font-size: 11.5px; line-height: 1.8; }
   .leaders { grid-template-columns: 1fr; gap: 8px; }
   .leader {
-    display: grid; grid-template-columns: 66px minmax(0,1fr); grid-template-rows: auto auto auto;
+    display: grid; grid-template-columns: 66px minmax(0,1fr); grid-template-rows: auto auto;
     align-items: center; column-gap: 12px; text-align: start;
     padding: 10px 12px; border-radius: 13px; min-width: 0;
   }
-  .leader-photo { grid-column: 1; grid-row: 1 / 4; width: 66px; height: 76px; margin: 0; border-radius: 10px; }
-  .leader .index { grid-column: 2; grid-row: 1; align-self: end; font-size: 9px; }
-  .leader strong { grid-column: 2; grid-row: 2; margin: 1px 0 2px; font-size: 13px; }
-  .leader>span:last-child { grid-column: 2; grid-row: 3; font-size: 10px; }
+  .leader-photo { grid-column: 1; grid-row: 1 / 3; width: 66px; height: 76px; margin: 0; border-radius: 10px; }
+  
+  .leader strong { grid-column: 2; grid-row: 1; margin: 1px 0 2px; font-size: 13px; }
+  .leader>span:last-child { grid-column: 2; grid-row: 2; font-size: 10px; }
 
   /* FAQ cards and contact details */
   .faq-section { padding: 40px 0; }

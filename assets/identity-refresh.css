@@ -70,7 +70,7 @@ html[lang^="fa"] .hero h1{line-height:1.5;}
   position:relative;
   z-index:1;
 }
-.leader .index{align-self:flex-start;position:relative;z-index:1;}
+
 .leader strong{display:block;margin:8px 0 4px;font-size:18px;line-height:1.5;position:relative;z-index:1;}
 .leader>span:last-child{position:relative;z-index:1;}
 html[lang^="en"] .leader{direction:ltr;}
