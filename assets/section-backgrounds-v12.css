@@ -1,0 +1,34 @@
+/* MEProfile V12 — alternating neutral section backgrounds.
+   Keeps the About section's photographic background and the dark hero/footer intact. */
+html body section#products.mep-product-section,
+html body section#partners.partner-band,
+html body section#distribution.global-section,
+html body section#faq.faq-section,
+html body section#inquiry.inquiry-section {
+  background: #ffffff !important;
+}
+
+html body section#catalog.mep-pricing-section,
+html body section#strengths.values-section,
+html body section#leadership.team-section,
+html body section#contact.contact-section {
+  background: #f4f6f7 !important;
+}
+
+/* Keep borders subtle so the alternating surfaces read as one continuous page. */
+html body section#catalog.mep-pricing-section,
+html body section#strengths.values-section,
+html body section#leadership.team-section,
+html body section#contact.contact-section {
+  border-top: 1px solid #e9edef;
+  border-bottom: 1px solid #e9edef;
+}
+
+html body section#products.mep-product-section,
+html body section#partners.partner-band,
+html body section#distribution.global-section,
+html body section#faq.faq-section,
+html body section#inquiry.inquiry-section {
+  border-top: 1px solid #f0f2f3;
+  border-bottom: 1px solid #f0f2f3;
+}

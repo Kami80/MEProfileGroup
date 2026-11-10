@@ -1,0 +1,322 @@
+/* MEProfile V11 — Mobile polish layer
+   Loaded after the existing theme to refine spacing, touch targets, hierarchy and responsive cards.
+   Desktop styles are intentionally left unchanged. */
+
+@media (max-width: 800px) {
+  html { scroll-padding-top: 82px; }
+  body { overflow-x: clip; -webkit-tap-highlight-color: transparent; }
+  .container { width: min(100% - 32px, var(--container, 1400px)); }
+  .section { padding-block: 48px; }
+  .section-heading { margin-bottom: 18px; }
+  .section-heading h2 { text-wrap: balance; }
+  .section-heading p { max-width: 62ch; }
+
+  /* Compact, consistent sticky navigation */
+  .site-header.nav-refined { padding-top: env(safe-area-inset-top); }
+  .nav-refined .header-shell { min-height: 70px; }
+  .nav-refined.header-scrolled .header-shell { min-height: 64px; }
+  .nav-refined .brand img { width: 132px; max-height: 52px; }
+  .nav-refined .nav-menu-toggle,
+  .nav-refined .nav-language { min-height: 44px; }
+  .nav-refined .mobile-menu {
+    left: 12px; right: 12px;
+    max-height: calc(100dvh - 102px);
+    padding: 10px;
+    border-radius: 18px;
+  }
+  .nav-refined .mobile-menu a { min-height: 45px; display: flex; align-items: center; padding: 10px 13px; }
+
+  /* Hero: clear first-screen hierarchy while retaining the full hero + ticker view */
+  .hero { background-position: 38% center !important; }
+  .hero-layout { min-height: 0 !important; padding: 18px 0 13px !important; }
+  .hero-copy {
+    width: 100% !important; max-width: none !important; margin: 0 !important;
+    padding: 17px 16px !important; border-radius: 18px;
+    background: linear-gradient(145deg, rgba(4,19,32,.78), rgba(5,24,39,.68));
+    border: 1px solid rgba(255,255,255,.15);
+    box-shadow: 0 12px 34px rgba(0,10,22,.16), inset 0 1px rgba(255,255,255,.10);
+    -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
+  }
+  .hero .eyebrow { display: inline-flex; align-items: center; font-size: 9px !important; padding: 6px 10px !important; }
+  .hero h1, html[lang^="fa"] .hero h1, html[lang^="en"] .hero h1 {
+    max-width: 100%; font-size: clamp(1.35rem, 5.8vw, 1.58rem) !important;
+    line-height: 1.42 !important; letter-spacing: 0 !important;
+    margin: 10px 0 9px !important; text-wrap: pretty;
+  }
+  html[lang^="fa"] .hero h1 { line-height: 1.5 !important; }
+  .hero p { max-width: 100%; font-size: 12px !important; line-height: 1.78 !important; margin: 0 0 12px !important; }
+  .hero-buttons { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 8px; margin-top: 12px !important; }
+  .hero-buttons .button { min-width: 0; min-height: 42px !important; padding: 8px 9px !important; justify-content: center; font-size: 10.5px !important; border-radius: 10px; }
+  .hero-statline { -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); }
+  .hero-statline .container { grid-template-columns: repeat(2,minmax(0,1fr)) !important; gap: 6px !important; padding: 7px 0 !important; }
+  .hero-stat {
+    min-width: 0; min-height: 54px !important; padding: 7px 9px !important;
+    display: grid; grid-template-columns: auto 1fr; align-items: center; column-gap: 8px;
+    border: 1px solid rgba(255,255,255,.12) !important; border-radius: 11px !important;
+    background: rgba(255,255,255,.055) !important;
+  }
+  .hero-stat b { font-size: 18px !important; }
+  .hero-stat span { min-width: 0; font-size: 9.5px !important; line-height: 1.45 !important; }
+  .hero-stat strong { font-size: 10px !important; line-height: 1.4 !important; }
+  .hero-stat .stat-icon { display: none !important; }
+  .marquee { min-height: 29px; padding: 6px 8px !important; font-size: 8.5px !important; letter-spacing: .07em !important; }
+
+  /* Product family cards */
+  .mep-product-section { padding: 42px 0 46px !important; }
+  .mep-products-head { align-items: flex-start; gap: 13px; margin-bottom: 19px; }
+  .mep-products-head .section-heading { min-width: 0; }
+  .mep-products-head .section-heading h2 { font-size: clamp(22px,5.6vw,27px); line-height: 1.45; margin: 7px 0 8px; }
+  .mep-products-head p { font-size: 12px; line-height: 1.85; }
+  .mep-head-link { flex: 0 0 auto; min-height: 36px; padding: 7px 10px; font-size: 10px; gap: 5px; border-radius: 9px; }
+  .mep-product-families { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 11px; align-items: stretch; }
+  .mep-family { min-width: 0; border-radius: 14px; box-shadow: 0 7px 20px rgba(18,42,65,.055); }
+  .mep-family-photo { aspect-ratio: 1.22; }
+  .mep-family-num { top: 8px; inset-inline-end: 8px; padding: 4px 7px; font-size: 9px; border-radius: 7px; }
+  .mep-family-details { padding: 12px 11px 11px; }
+  .mep-family-overline { font-size: 7.5px; letter-spacing: .035em; }
+  .mep-family-details h3 { font-size: 13px; line-height: 1.55; margin: 7px 0 5px; }
+  .mep-family-details p { font-size: 10px; line-height: 1.75; margin: 0 0 10px; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; }
+  .mep-family-actions { display: grid; grid-template-columns: 1fr; gap: 4px; margin-top: auto; }
+  .mep-family-cta { width: 100%; min-height: 37px; padding: 7px 5px; justify-content: center; text-align: center; font-size: 9.5px; border-radius: 8px; }
+  .mep-family-secondary { min-height: 31px; display: flex; align-items: center; justify-content: center; font-size: 9.5px; }
+
+  /* Live price catalogue: horizontal category rail and readable product rows */
+  .mep-pricing-section { padding: 43px 0 48px !important; }
+  .mep-pricing-title { gap: 10px; margin-bottom: 17px; }
+  .mep-pricing-title h2 { font-size: 24px; line-height: 1.45; margin: 7px 0; }
+  .mep-pricing-title p { font-size: 12px; line-height: 1.8; }
+  .mep-price-indicator { min-height: 32px; padding: 5px 9px; font-size: 10px; }
+  .mep-pricing-panel { padding: 12px; border-radius: 16px; }
+  .mep-pricing-tabs {
+    display: flex; flex-wrap: nowrap; overflow-x: auto; overscroll-behavior-inline: contain;
+    scrollbar-width: none; -webkit-overflow-scrolling: touch; gap: 7px;
+    margin: 0 -1px 14px; padding: 1px 1px 5px; scroll-snap-type: x proximity;
+  }
+  .mep-pricing-tabs::-webkit-scrollbar { display: none; }
+  .mep-price-tab { flex: 0 0 auto; min-height: 39px; padding: 8px 12px; font-size: 10.5px; border-radius: 9px; scroll-snap-align: start; }
+  .mep-price-controls { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 8px; }
+  .mep-price-search { grid-column: 1 / -1; }
+  .mep-price-search input, .mep-price-select-label select { height: 44px; min-height: 44px; padding-inline: 11px; font-size: 11px; border-radius: 9px; }
+  .mep-price-search input { padding-inline-start: 38px; }
+  .mep-search-icon { inset-inline-start: 12px; font-size: 21px; }
+  .mep-price-list-head { margin: 13px 0 8px; font-size: 10.5px; }
+  .mep-price-refresh { min-height: 38px; padding: 7px 8px; font-size: 10px; }
+  .mep-price-table tbody { gap: 8px; }
+  .mep-price-table tr:not(.mep-price-placeholder) {
+    grid-template-columns: minmax(0,1fr) auto; gap: 6px 10px;
+    padding: 11px 12px; border-radius: 11px;
+  }
+  .mep-price-table td:nth-child(1) { padding-bottom: 7px; }
+  .mep-price-table .mep-size-title { font-size: 13px; }
+  .mep-price-category { font-size: 9.5px; margin-top: 2px; }
+  .mep-price-number { font-size: 15px; }
+  .mep-price-no-number { font-size: 10px; }
+  .mep-price-quote { min-height: 39px; padding: 7px 9px; font-size: 10px; border-radius: 8px; }
+  .mep-price-footer { gap: 7px; padding: 10px; margin-top: 11px; font-size: 10.5px; }
+  .mep-price-footer a { min-height: 36px; display: inline-flex; align-items: center; }
+
+  /* About image remains visible behind a readable, compact text layer */
+  html body section.about-section.section {
+    padding: 34px 0 !important;
+    background-image: linear-gradient(180deg,rgba(247,250,249,.83) 0%,rgba(247,250,249,.88) 52%,rgba(242,247,246,.91) 100%),url('about-heritage.webp') !important;
+    background-position: center, 58% center !important;
+    background-size: cover !important;
+  }
+  html body .about-composition { min-height: 0; }
+  html body .about-intro { width: 100%; padding: 17px 16px; border-radius: 18px; background: rgba(255,255,255,.66); border: 1px solid rgba(255,255,255,.75); box-shadow: 0 8px 24px rgba(21,63,76,.045); }
+  html body #about-title { font-size: clamp(24px,6.4vw,29px); line-height: 1.45; margin: 0 0 10px; }
+  html body .about-intro>p { font-size: 11.5px; line-height: 1.85; margin: 0 0 7px; }
+  html body .about-kicker { margin-bottom: 9px; }
+  html body .about-features { gap: 6px; margin: 10px 0; }
+  html body .about-features span { padding: 6px 8px; font-size: 9px; }
+  html body .about-stats { gap: 6px; margin-bottom: 11px; }
+  html body .about-stat { padding: 8px 6px; border-radius: 10px; }
+  html body .about-stat b { font-size: 18px; }
+  html body .about-stat span { font-size: 8.5px; line-height: 1.5; }
+  html body .about-explore { min-height: 38px; padding: 7px 12px; font-size: 10.5px; }
+
+  /* Partners: show both company identities together */
+  .partner-band { padding: 39px 0; }
+  .partners-layout { grid-template-columns: 1fr; gap: 15px; }
+  .partners-intro span { margin-bottom: 6px; font-size: 9px; }
+  .partners-intro strong { font-size: 21px; line-height: 1.45; }
+  .partner-list { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 9px; }
+  .partner-item.partner-item-logo { min-width: 0; min-height: 126px; padding: 13px 8px 10px; border-radius: 13px; }
+  .partner-item-logo img, .partner-item-logo:first-child img { width: 100%; height: 62px; max-height: 62px; }
+  .partner-item-logo span { font-size: 10px; }
+
+  /* Value proposition and export section */
+  html body .values-section.section, html body .global-section.section,
+  html body .contact-section.section, html body .inquiry-section.section { padding-block: 39px !important; }
+  html body #strengths .section-heading h2, html body #distribution .section-heading h2,
+  html body #contact h2, html body #inquiry h2 { font-size: clamp(22px,6vw,27px); line-height: 1.48; }
+  html body #strengths .section-heading p, html body #distribution .global-copy>p,
+  html body #contact .contact-lead>p, html body #inquiry .inquiry-copy>p { font-size: 11.5px; line-height: 1.85; }
+  html body .values-section .section-heading { margin-bottom: 14px; }
+  html body #strengths .values-grid { gap: 8px; }
+  html body #strengths .value, html body #strengths .value:first-child { padding: 12px 13px; grid-template-columns: 38px minmax(0,1fr); column-gap: 10px; border-radius: 13px; }
+  html body #strengths .value-icon { width: 38px; height: 38px; border-radius: 10px; }
+  html body #strengths .value-icon img { width: 22px; height: 22px; }
+  html body #strengths .value h3 { font-size: 13px; line-height: 1.5; }
+  html body #strengths .value p { font-size: 10.5px; line-height: 1.75; }
+  html body #distribution .global-layout { gap: 13px; }
+  html body #distribution .global-copy .section-heading { margin-bottom: 7px; }
+  html body #distribution .global-points { gap: 6px; margin-top: 11px; }
+  html body #distribution .global-point { padding: 6px 9px; font-size: 9.5px; }
+  html body #distribution .global-art.global-art-interactive { height: 255px; min-height: 255px; max-height: 255px; border-radius: 17px; }
+  html body #distribution .globe-interactive-frame { width: min(70%,205px); max-width: 205px; }
+  html body #distribution .globe-panel-top, html body #distribution .globe-panel-bottom { inset-inline: 9px; }
+  html body #distribution .globe-panel-top { top: 9px; }
+  html body #distribution .globe-panel-bottom { bottom: 9px; }
+
+  /* Leadership cards become compact horizontal profile rows */
+  .team-section { padding: 40px 0; }
+  .team-layout { grid-template-columns: 1fr; gap: 15px; }
+  .team-layout h2 { font-size: 24px; line-height: 1.45; margin: 7px 0; }
+  .team-layout>div:first-child p { font-size: 11.5px; line-height: 1.8; }
+  .leaders { grid-template-columns: 1fr; gap: 8px; }
+  .leader {
+    display: grid; grid-template-columns: 66px minmax(0,1fr); grid-template-rows: auto auto auto;
+    align-items: center; column-gap: 12px; text-align: start;
+    padding: 10px 12px; border-radius: 13px; min-width: 0;
+  }
+  .leader-photo { grid-column: 1; grid-row: 1 / 4; width: 66px; height: 76px; margin: 0; border-radius: 10px; }
+  .leader .index { grid-column: 2; grid-row: 1; align-self: end; font-size: 9px; }
+  .leader strong { grid-column: 2; grid-row: 2; margin: 1px 0 2px; font-size: 13px; }
+  .leader>span:last-child { grid-column: 2; grid-row: 3; font-size: 10px; }
+
+  /* FAQ cards and contact details */
+  .faq-section { padding: 40px 0; }
+  .faq-layout { grid-template-columns: 1fr; gap: 13px; }
+  .faq-layout .section-heading h2 { font-size: 24px; margin: 7px 0; }
+  .faq-layout .section-heading p { font-size: 11.5px; line-height: 1.8; }
+  .faq-list { gap: 7px; }
+  .faq-list details { border-radius: 12px; }
+  .faq-list summary { min-height: 48px; padding: 12px 13px; font-size: 11.5px; line-height: 1.7; }
+  .faq-list details p { padding: 0 13px 13px; font-size: 10.5px; line-height: 1.8; }
+  html body #contact .contact-wrap { grid-template-columns: 1fr; gap: 10px; }
+  html body #contact .contact-lead { padding: 17px 16px; border-radius: 16px; }
+  html body #contact .contact-lead h2 { font-size: 23px; line-height: 1.48; }
+  html body #contact .contact-lead .button { min-height: 43px; padding: 8px 13px; font-size: 11px; }
+  html body #contact .contact-info { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 8px; }
+  html body #contact .contact-cell, html body #contact .contact-social { min-width: 0; padding: 12px 10px; gap: 8px; border-radius: 13px; }
+  html body #contact .contact-cell>img { width: 28px; height: 28px; padding: 6px; border-radius: 9px; }
+  html body #contact .contact-cell>div { min-width: 0; }
+  html body #contact .contact-cell h3 { font-size: 11px; margin: 1px 0 6px; }
+  html body #contact .contact-cell p, html body #contact .contact-cell a { font-size: 10px; line-height: 1.8; overflow-wrap: anywhere; }
+  html body #contact .contact-cell a.mep-phone-link { min-height: 29px; gap: 5px; }
+  html body #contact .contact-cell .mep-inline-icon { width: 17px; height: 17px; flex-basis: 17px; }
+  html body #contact .contact-social { grid-column: 1 / -1; }
+  html body #contact .contact-social>div { display: flex; flex-wrap: wrap; gap: 5px 9px; align-items: center; }
+  html body #contact .contact-social h3 { flex-basis: 100%; }
+  html body #contact .contact-social a { min-height: 32px; padding: 4px 7px; border-radius: 8px; background: #f5f8f9; }
+
+  /* Quote form: comfortable inputs and a clear two-column field layout */
+  html body #inquiry .inquiry-layout { grid-template-columns: 1fr; gap: 10px; }
+  html body #inquiry .inquiry-copy, html body #inquiry .inquiry-form { padding: 17px 15px; border-radius: 16px; }
+  html body #inquiry .inquiry-copy h2 { font-size: 23px; line-height: 1.5; }
+  html body #inquiry .inquiry-mini { font-size: 9.5px; padding: 6px 9px; margin-top: 10px; }
+  html body #inquiry .mep-quick-contact-inquiry { margin-top: 10px; padding: 9px; border-radius: 12px; }
+  html body #inquiry .mep-quick-contact-inquiry .mep-quick-caption { font-size: 10px; }
+  html body #inquiry .mep-quick-contact-inquiry .mep-quick-links { gap: 6px; }
+  html body #inquiry .mep-quick-contact-inquiry .mep-quick-link { flex: 1 1 0; min-height: 48px; padding: 7px 8px; gap: 5px; }
+  html body #inquiry .mep-quick-contact-inquiry .mep-quick-link bdi { font-size: 9px; }
+  html body #inquiry .inquiry-form .form-title { font-size: 16px; margin-bottom: 9px; }
+  html body #inquiry .spec-selection { font-size: 10px; padding: 8px 9px; margin: 4px 0 10px; }
+  html body #inquiry .form-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 9px 8px; }
+  html body #inquiry .field { min-width: 0; }
+  html body #inquiry .field.full { grid-column: 1 / -1; }
+  html body #inquiry .field label { font-size: 10px; }
+  html body #inquiry .field :is(input,select,textarea) { min-height: 44px; padding: 8px 9px; font-size: 10.5px; border-radius: 9px; }
+  html body #inquiry .field textarea { min-height: 70px; }
+  html body #inquiry .form-actions { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 7px; }
+  html body #inquiry .form-actions .button { width: 100%; min-height: 43px; padding: 8px 7px; font-size: 10px; }
+  html body #inquiry .form-notice { font-size: 9.5px; line-height: 1.8; }
+
+  /* Footer and floating controls */
+  .footer-top { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 22px 14px; padding: 38px 0 28px; }
+  .footer-top>div:first-child { grid-column: 1 / -1; }
+  .footer-brand img { width: 160px; }
+  .footer-brand p, .footer-note { font-size: 10.5px; line-height: 1.8; }
+  .footer-heading { font-size: 11px; margin-bottom: 10px; }
+  .footer-links { gap: 6px; }
+  .footer-links a, .footer-phones { font-size: 10.5px; }
+  .footer-bottom { padding: 13px 0; font-size: 9px; }
+  .mep-contact-dock { right: max(11px,env(safe-area-inset-right)); bottom: max(11px,env(safe-area-inset-bottom)); }
+  .mep-contact-fab { width: 49px; height: 49px; }
+  .mep-contact-panel { width: min(330px,calc(100vw - 22px)); max-height: calc(100dvh - 88px); border-radius: 19px; }
+  .liquid-top { left: max(11px,env(safe-area-inset-left)) !important; bottom: max(11px,env(safe-area-inset-bottom)) !important; }
+
+  /* Product detail pages */
+  .detail-hero-grid { grid-template-columns: 1fr; min-height: 0; gap: 16px; padding: 30px 0 34px; }
+  .detail-hero h1 { font-size: clamp(25px,6.5vw,31px); line-height: 1.4; margin: 10px 0; }
+  .detail-hero p { font-size: 12px; line-height: 1.85; }
+  .detail-visual { height: 190px; border-radius: 15px; }
+  .detail-layout { grid-template-columns: 1fr; gap: 18px; }
+  .detail-layout h2 { font-size: 23px; line-height: 1.5; }
+  .detail-layout p { font-size: 12px; line-height: 1.9; }
+  .detail-side { padding: 16px; border-radius: 14px; }
+  .detail-side h3 { font-size: 15px; margin-bottom: 12px; }
+  .detail-side ul { font-size: 11px; padding-inline-start: 18px; }
+  .detail-catalog { padding: 16px; margin-top: 18px; }
+  .related-section { padding: 40px 0; }
+  .related-section .products-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px; }
+  .related-section .product-art { height: 120px; }
+  .seo-guidance, .seo-spec-section, .seo-faq, .seo-order, .seo-related { margin-block: 1rem; padding: 14px; border-radius: 15px; }
+  .seo-spec-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 8px; }
+  .seo-spec-card { min-height: 68px; padding: 10px; }
+  .spec-chip.spec-action { min-height: 40px; padding: 7px 10px; font-size: 11px; border-radius: 9px; }
+}
+
+@media (max-width: 580px) {
+  .mep-products-head { display: flex; flex-direction: column; align-items: flex-start; }
+  .mep-head-link { align-self: flex-start; }
+  .mep-price-footer { align-items: flex-start; flex-direction: column; }
+}
+
+@media (max-width: 380px) {
+  .container { width: calc(100% - 26px); }
+  .nav-refined .brand img { width: 120px; }
+  .hero-copy { padding: 14px 12px !important; }
+  .hero h1, html[lang^="fa"] .hero h1, html[lang^="en"] .hero h1 { font-size: 1.28rem !important; }
+  .hero p { font-size: 11px !important; }
+  .hero-buttons .button { font-size: 9.5px !important; }
+  .mep-product-families { gap: 8px; }
+  .mep-family-details { padding: 10px 9px; }
+  .mep-family-details h3 { font-size: 12px; }
+  .mep-family-details p { font-size: 9px; }
+  .mep-family-cta { font-size: 8.8px; }
+  html body #contact .contact-info { grid-template-columns: 1fr; }
+  html body #contact .contact-social { grid-column: auto; }
+  html body #inquiry .form-grid { grid-template-columns: 1fr; }
+  html body #inquiry .field.full { grid-column: auto; }
+  html body #inquiry .form-actions { grid-template-columns: 1fr; }
+  .partner-item.partner-item-logo { min-height: 112px; }
+  .partner-item-logo img, .partner-item-logo:first-child img { height: 52px; }
+  .related-section .products-grid { grid-template-columns: 1fr; }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .mep-family:hover, .leader:hover, .value:hover, .mep-head-link:hover { transform: none; }
+  .mep-family:active, .mep-price-quote:active, .button:active { transform: scale(.985); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mep-pricing-tabs { scroll-behavior: auto; }
+  .mep-family, .leader, .value, .mep-contact-panel { transition: none !important; }
+}
+
+/* Short mobile viewports: keep the first hero screen compact without shrinking body text everywhere. */
+@media (max-width: 560px) and (max-height: 640px) {
+  html body .hero-layout { padding-block: 8px !important; }
+  html body .hero-copy { padding: 10px 12px !important; }
+  html body .hero h1, html[lang^="fa"] body .hero h1, html[lang^="en"] body .hero h1 {
+    font-size: clamp(1.08rem,4.8vw,1.24rem) !important; line-height: 1.28 !important; margin: 6px 0 !important;
+  }
+  html body .hero p { font-size: 10.5px !important; line-height: 1.42 !important; margin-bottom: 6px !important; }
+  html body .hero-buttons { margin-top: 7px !important; }
+  html body .hero-buttons .button { min-height: 34px !important; padding: 5px 7px !important; font-size: 9px !important; }
+  html body .hero-stat { min-height: 44px !important; padding: 5px 6px !important; }
+  html body .hero-statline .container { padding-block: 3px !important; }
+  html body .marquee { min-height: 25px; padding-block: 4px !important; }
+}

@@ -1,0 +1,46 @@
+/* MEP contact dock — compact, accessible, glassy and responsive. */
+.mep-contact-dock{position:fixed;right:max(18px,env(safe-area-inset-right));bottom:max(20px,env(safe-area-inset-bottom));z-index:115;direction:ltr;isolation:isolate}
+.mep-contact-fab{position:relative;width:58px;height:58px;border-radius:50%;border:1px solid rgba(255,242,215,.67);display:grid;place-items:center;background:linear-gradient(140deg,#ffe0a1 0%,#e3b96f 60%,#bb8e50 100%);box-shadow:inset 0 2px 2px rgba(255,255,255,.72),inset 0 -2px 9px rgba(94,59,22,.09),0 12px 36px rgba(5,26,46,.34),0 0 0 7px rgba(230,188,117,.11);color:#142e44;cursor:pointer;transition:transform .37s cubic-bezier(.2,.86,.22,1),box-shadow .3s,background .3s;touch-action:manipulation}
+.mep-contact-fab:hover{transform:translateY(-4px) scale(1.04);box-shadow:inset 0 1px 2px #fff,0 16px 43px rgba(5,26,46,.38),0 0 0 9px rgba(230,188,117,.14)}
+.mep-contact-fab:active{transform:scale(.94);transition-duration:.1s}
+.mep-contact-fab:focus-visible,.mep-contact-close:focus-visible,.mep-contact-channel:focus-visible,.mep-contact-phones a:focus-visible{outline:3px solid #72c6f4;outline-offset:4px}
+.mep-contact-fab img{width:27px;height:27px;position:absolute;transition:opacity .24s,transform .46s cubic-bezier(.2,.86,.22,1)}
+.mep-contact-fab .mep-fab-x{font-size:28px;font-weight:300;line-height:1;position:absolute;opacity:0;transform:scale(.7) rotate(-75deg);transition:opacity .22s,transform .46s cubic-bezier(.2,.86,.22,1)}
+.mep-contact-dock.is-open .mep-contact-fab img{opacity:0;transform:scale(.7) rotate(70deg)}
+.mep-contact-dock.is-open .mep-fab-x{opacity:1;transform:scale(1) rotate(0)}
+.mep-contact-dock.is-open .mep-contact-fab{background:linear-gradient(135deg,#ffead0,#e4bc78)}
+.mep-contact-panel{position:absolute;right:0;bottom:calc(100% + 17px);width:min(356px,calc(100vw - 28px));max-height:calc(100dvh - 110px);overflow:auto;overscroll-behavior:contain;border-radius:27px;border:1px solid rgba(255,255,255,.72);background:linear-gradient(142deg,rgba(253,255,255,.98),rgba(241,248,252,.96) 52%,rgba(230,241,248,.97));box-shadow:0 30px 90px rgba(4,25,44,.32),0 5px 22px rgba(4,25,44,.12),inset 0 1px rgba(255,255,255,.9);backdrop-filter:blur(28px) saturate(180%);-webkit-backdrop-filter:blur(28px) saturate(180%);color:#14334b;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(13px) scale(.91);transform-origin:bottom right;transition:opacity .23s ease,visibility .23s ease,transform .42s cubic-bezier(.2,.86,.22,1);text-align:start}
+.mep-contact-dock.is-open .mep-contact-panel{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0) scale(1)}
+.mep-contact-panel::before{content:"";position:absolute;inset:0 0 auto;height:115px;pointer-events:none;background:radial-gradient(ellipse 67% 93% at 72% 0%,rgba(237,194,127,.18),transparent 80%)}
+.mep-contact-head{position:relative;display:flex;align-items:start;justify-content:space-between;gap:12px;padding:22px 21px 13px}
+.mep-contact-head small{display:block;color:#a07e4e;font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+.mep-contact-head h2{font-size:22px;line-height:1.4;margin:6px 0 3px;font-weight:800;letter-spacing:-.02em;color:#0c2b44}
+html[lang=fa] .mep-contact-head h2{letter-spacing:0}
+.mep-contact-head p{font-size:12px;line-height:1.6;color:#587086;margin:0}
+.mep-contact-close{display:grid;place-items:center;flex:0 0 auto;width:31px;height:31px;border-radius:50%;background:rgba(16,53,77,.06);border:1px solid rgba(47,87,110,.1);color:#38536a;font-size:19px;line-height:1;cursor:pointer;transition:background .2s,transform .2s}
+.mep-contact-close:hover{background:rgba(16,53,77,.13);transform:rotate(90deg)}
+.mep-contact-channels{padding:4px 13px 4px;display:grid;gap:7px}
+.mep-contact-channel{display:flex;align-items:center;gap:12px;position:relative;text-decoration:none!important;padding:11px 12px;border:1px solid rgba(161,187,202,.24);border-radius:17px;background:rgba(255,255,255,.66);box-shadow:0 3px 11px rgba(12,45,66,.03),inset 0 1px rgba(255,255,255,.7);color:#16374f!important;transition:transform .3s cubic-bezier(.2,.86,.22,1),background .2s,border-color .2s,box-shadow .3s}
+.mep-contact-channel:hover{transform:translateY(-2px);background:rgba(255,255,255,.95);border-color:rgba(214,170,107,.43);box-shadow:0 9px 20px rgba(10,47,70,.09)}
+.mep-contact-channel:active{transform:scale(.98)}
+.mep-contact-channel .mep-contact-icon{width:44px;height:44px;flex:0 0 44px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(130deg,rgba(255,255,255,.97),rgba(236,245,249,.91));border:1px solid rgba(211,230,237,.74)}
+.mep-contact-icon img{width:26px;height:26px;object-fit:contain}
+.mep-contact-channel span.mep-contact-label{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}
+.mep-contact-channel strong{font-size:13.2px;line-height:1.35;color:#12324b;font-weight:800}
+.mep-contact-channel small{font-size:11px;color:#60788a;font-weight:500;overflow-wrap:anywhere}
+.mep-contact-arr{font-size:16px;line-height:1;color:#a07e4e}
+.mep-contact-footer{margin:9px 13px 13px;padding:12px 11px 5px;border-radius:15px;background:rgba(214,231,241,.38);border:1px solid rgba(158,190,207,.21)}
+.mep-contact-footer>span{display:block;color:#496679;font-size:10px;font-weight:700;margin-bottom:8px}
+.mep-contact-phones{display:flex;flex-wrap:wrap;gap:6px}
+.mep-contact-phones a{display:inline-block;font-family:Arial,sans-serif;font-size:11px;letter-spacing:.01em;font-weight:700;color:#143d58;text-decoration:none;background:rgba(255,255,255,.79);border:1px solid rgba(192,213,226,.72);border-radius:10px;padding:8px 9px;transition:background .2s,transform .2s}
+.mep-contact-phones a:hover{background:#fff;transform:translateY(-1px)}
+.mep-contact-dock[dir=rtl] .mep-contact-panel{direction:rtl}
+/* The return-to-top control now occupies the opposite corner in both writing directions. */
+.liquid-top{left:21px!important;right:auto!important}
+.contact-social a.mep-social-link,.contact-cell a.mep-phone-link{display:flex;align-items:center;gap:9px;max-width:100%;width:fit-content;min-height:31px}
+.contact-social .mep-inline-icon,.contact-cell .mep-inline-icon{width:23px;height:23px;flex:0 0 23px;object-fit:contain}
+.footer-social .mep-inline-icon{display:inline-block;width:19px;height:19px;vertical-align:middle;margin-inline-end:6px}
+@media(max-width:600px){.mep-contact-dock{right:max(13px,env(safe-area-inset-right));bottom:max(15px,env(safe-area-inset-bottom))}.mep-contact-fab{width:53px;height:53px}.mep-contact-panel{bottom:calc(100% + 12px);width:min(340px,calc(100vw - 26px))}.mep-contact-head{padding:18px 17px 11px}.mep-contact-head h2{font-size:21px}.mep-contact-channels{padding:2px 10px 3px}.mep-contact-channel{padding:9px 10px}.mep-contact-footer{margin:8px 10px 11px}.liquid-top{left:13px!important;bottom:15px!important}}
+@media(prefers-reduced-motion:reduce){.mep-contact-panel,.mep-contact-fab,.mep-contact-fab img,.mep-fab-x,.mep-contact-channel,.mep-contact-close{animation:none!important;transition-duration:.01ms!important;transform:none!important}}
+@media(prefers-reduced-transparency:reduce){.mep-contact-panel{background:#f7fbff;backdrop-filter:none;-webkit-backdrop-filter:none}.mep-contact-channel{background:#fff}}
+@media(prefers-contrast:more){.mep-contact-panel{border:2px solid #16334a;background:#fff}.mep-contact-channel{border:1px solid #3a5368}.mep-contact-channel small{color:#274459}}

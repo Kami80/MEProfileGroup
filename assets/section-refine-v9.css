@@ -1,0 +1,188 @@
+/* MEProfile V9 • light, compact editorial sections, final cascade layer.
+   Loaded last on homepages to prevent previous dark overrides. */
+:root{--m9-ink:#153748;--m9-deep:#102f42;--m9-copy:#506977;--m9-border:#dae5e8;--m9-gold:#aa7938}
+html{scroll-padding-top:90px}
+html body .values-section.section,
+html body .global-section.section,
+html body .contact-section.section,
+html body .inquiry-section.section {padding-block:clamp(42px,4.7vw,62px);color:var(--m9-ink)}
+html body #strengths .eyebrow,
+html body #distribution .eyebrow,
+html body #contact .eyebrow,
+html body #inquiry .eyebrow {color:var(--m9-gold);font-size:11px;letter-spacing:0}
+html body #strengths .section-heading h2,
+html body #distribution .section-heading h2,
+html body #contact h2,
+html body #inquiry h2 {font-size:clamp(1.9rem,2.6vw,2.75rem);line-height:1.46;letter-spacing:normal;color:var(--m9-ink);margin-block:10px 11px}
+html body #strengths .section-heading p,
+html body #distribution .global-copy>p,
+html body #contact .contact-lead>p,
+html body #inquiry .inquiry-copy>p {font-size:13.5px;line-height:1.95;color:var(--m9-copy);margin:0}
+
+/* About: generated factory image covers the entire SECTION, not a detached card.
+   Legible translucent light overlay lets the product photography remain visible. */
+html body section.about-section.section{
+  position:relative;isolation:isolate;overflow:hidden;
+  padding:clamp(45px,5vw,68px) 0;
+  color:var(--m9-ink);
+  background-color:#d9e2e4;
+  background-image:linear-gradient(270deg,rgba(249,251,251,.985) 0%,rgba(246,249,249,.96) 34%,rgba(242,247,247,.85) 54%,rgba(234,242,242,.32) 78%,rgba(230,239,240,.10) 100%),url('about-heritage.webp');
+  background-position:center,center 53%;background-size:cover;background-repeat:no-repeat;
+}
+html[lang^="en"] body section.about-section.section{
+  background-image:linear-gradient(90deg,rgba(249,251,251,.99) 0%,rgba(246,249,249,.97) 35%,rgba(242,247,247,.84) 56%,rgba(234,242,242,.28) 78%,rgba(230,239,240,.10) 100%),url('about-heritage.webp');
+}
+html body .about-section:before,html body .about-section:after{content:none!important;display:none!important}
+html body .about-composition{position:relative;z-index:1;display:flex;align-items:center;min-height:405px}
+html body .about-intro{width:min(670px,62%);max-width:100%;text-align:start;padding:0}
+html body .about-kicker{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-bottom:13px}
+html body .about-kicker .eyebrow{font-size:11px;font-weight:800;color:#9c713f;margin:0}
+html body .about-signature{font:700 10px/1.5 system-ui,Arial,sans-serif;letter-spacing:.15em;color:#67818a}
+html body #about-title{font-size:clamp(2.1rem,3.25vw,3.35rem);line-height:1.38;color:#102f40;margin:0 0 16px;font-weight:850}
+html body .about-intro>p{font-size:14px;line-height:1.97;color:#3e5b68;margin:0 0 10px;max-width:665px}
+html body .about-features{display:flex;flex-wrap:wrap;gap:8px;margin:17px 0}
+html body .about-features span{display:inline-flex;align-items:center;gap:7px;padding:7px 12px;border-radius:99px;border:1px solid rgba(142,166,171,.36);background:rgba(255,255,255,.73);font-size:11px;font-weight:750;color:#284c5d}
+html body .about-features span:before{content:"";width:6px;height:6px;flex:none;border-radius:50%;background:#bb8d51}
+html body .about-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin:0 0 16px}
+html body .about-stat{min-width:0;padding:11px 13px;border-radius:14px;border:1px solid rgba(201,218,222,.86);background:rgba(255,255,255,.83);box-shadow:0 5px 22px rgba(21,63,76,.05)}
+html body .about-stat b{display:block;font-size:clamp(19px,2vw,27px);line-height:1.2;font-weight:800;color:#163d4f}
+html body .about-stat span{display:block;font-size:11px;line-height:1.7;margin-top:4px;color:#5a727d}
+html body .about-explore{display:inline-flex;align-items:center;gap:8px;min-height:36px;padding:6px 13px;border-radius:99px;background:#174151;color:#fff;text-decoration:none;font-size:12px;font-weight:750;box-shadow:0 4px 14px rgba(14,52,65,.11)}
+html body .about-explore:hover{background:#275a66}
+html body .about-explore:focus-visible{outline:3px solid #b48747;outline-offset:3px}
+
+/* Core values — light text, light background, compact horizontal cards. */
+html body section.values-section.section{background:linear-gradient(160deg,#f7fafb,#edf4f5 78%);border-block:1px solid #e3eaed;overflow:hidden}
+html body .values-section:before,html body .values-section:after{display:none!important;content:none!important}
+html body .values-section .section-heading{max-width:none;margin:0 0 22px}
+html body .values-section .section-heading h2{max-width:700px;margin:8px 0 9px}
+html body .values-section .section-heading p{max-width:810px}
+html body .values-section .values-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;border:0}
+html body .values-section .value,html body .values-section .value:first-child{
+ display:flex;flex-direction:column;align-items:flex-start;min-width:0;
+ padding:22px 22px 21px;min-height:174px;border:1px solid var(--m9-border);
+ border-radius:19px;background:#fff;box-shadow:0 8px 28px rgba(21,63,76,.04);color:var(--m9-ink);
+}
+html body .values-section .value:hover{transform:translateY(-2px);background:#fff;border-color:#bdcfd4;box-shadow:0 12px 28px rgba(20,59,72,.07)}
+html body .values-section .value-icon{display:grid;place-items:center;width:46px;height:46px;border-radius:13px;background:#eff5f5;border:1px solid #dce8e8;box-shadow:none}
+html body .values-section .value-icon img{width:27px;height:27px;object-fit:contain}
+html body .values-section .value h3{font-size:17px;line-height:1.5;margin:11px 0 5px;color:#183d4f}
+html body .values-section .value p{font-size:12.5px;line-height:1.9;color:#557080;margin:0}
+
+/* Distribution — same light palette, smaller interactive globe and calmer spacing. */
+html body section.global-section.section{background:#fff;border-bottom:1px solid #e4eaee}
+html body #distribution .global-layout{display:grid;grid-template-columns:1fr .96fr;gap:clamp(24px,4vw,52px);align-items:center}
+html body #distribution .global-copy .section-heading{margin:0 0 9px}
+html body #distribution .global-copy>p{max-width:610px}
+html body #distribution .global-points{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 0}
+html body #distribution .global-point{font-size:11.5px;line-height:1.6;padding:8px 12px;border-radius:99px;background:#eef5f5;border:1px solid #dce8e8;color:#2f5564}
+html body #distribution .global-art.global-art-interactive{min-height:310px;height:310px;max-height:310px;border-radius:22px;border:1px solid #c9d8de;box-shadow:0 12px 30px rgba(16,52,68,.10)}
+html body #distribution .globe-interactive-frame{width:min(76%,275px);max-width:275px}
+html body #distribution .globe-panel-top{top:12px}
+html body #distribution .globe-panel-bottom{bottom:12px}
+html body #distribution .globe-panel-top,html body #distribution .globe-panel-bottom{inset-inline:14px}
+
+/* Direct contact — entirely light surfaces, dark readable text. */
+html body section.contact-section.section{background:linear-gradient(145deg,#f0f5f7,#f9fbfc 70%);border-block:1px solid #e1eaee}
+html body .contact-section:before,html body .contact-section:after{display:none!important;content:none!important}
+html body #contact .contact-wrap{display:grid;grid-template-columns:.91fr 1.15fr;gap:18px;align-items:stretch}
+html body #contact .contact-lead{padding:26px;border-radius:22px;background:#fff;border:1px solid #dce7eb;box-shadow:0 8px 25px rgba(18,54,69,.045)}
+html body #contact .contact-lead h2{max-width:490px}
+html body #contact .contact-lead .button{margin-top:19px;font-size:12px;min-height:44px;gap:9px}
+html body #contact .contact-info{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+html body #contact .contact-cell,html body #contact .contact-social{
+ display:flex;align-items:flex-start;gap:12px;padding:17px 16px;min-height:0;border:1px solid #dce7eb;
+ background:#fff;border-radius:17px;box-shadow:0 5px 22px rgba(18,54,69,.04);color:var(--m9-ink)
+}
+html body #contact .contact-social{grid-column:1/-1}
+html body #contact .contact-cell>img{width:34px;height:34px;flex:none;object-fit:contain;border-radius:10px;padding:7px;background:#f0f5f7;border:1px solid #e1eaef}
+html body #contact .contact-cell>div{min-width:0}
+html body #contact .contact-cell h3{font-size:13px;line-height:1.5;margin:2px 0 7px;color:#1c4959}
+html body #contact .contact-cell p,html body #contact .contact-cell a{font-size:12px;line-height:1.9;color:#506a7b}
+html body #contact .contact-cell a:hover{color:#0b4158}
+html body #contact .contact-cell .mep-inline-icon{width:17px;height:17px;object-fit:contain}
+html body #contact .contact-cell .contact-phone{white-space:nowrap}
+html body #contact .contact-cell .mep-social-link{overflow-wrap:anywhere}
+
+/* Quote form — light on light, compact controls and clear high-contrast copy. */
+html body section.inquiry-section.section{background:linear-gradient(165deg,#fffdfa 0%,#f0f6f7 66%,#edf4f5 100%);border-bottom:1px solid #e0e9ed}
+html body .inquiry-section:before,html body .inquiry-section:after{display:none!important;content:none!important}
+html body #inquiry .inquiry-layout{display:grid;grid-template-columns:.86fr 1.14fr;gap:18px;align-items:start}
+html body #inquiry .inquiry-copy{min-width:0;padding:24px;background:#fff;border:1px solid #dce7eb;border-radius:22px;box-shadow:0 7px 26px rgba(17,52,66,.05)}
+html body #inquiry .inquiry-copy h2{font-size:clamp(1.85rem,2.55vw,2.65rem);line-height:1.55;margin:11px 0}
+html body #inquiry .inquiry-copy h2 em{font-style:normal;color:#996e37}
+html body #inquiry .inquiry-mini{display:inline-flex;align-items:center;flex-wrap:wrap;gap:7px;margin-top:15px;padding:7px 11px;border-radius:99px;background:#fff6e7;color:#8c692d;border:1px solid #edd8b4;font-size:11px;line-height:1.65}
+html body #inquiry .mep-quick-contact-inquiry{margin-top:15px;padding:12px;background:#f3f8f9;border:1px solid #e0e9ed;border-radius:16px;box-shadow:none}
+html body #inquiry .mep-quick-contact-inquiry:before{display:none}
+html body #inquiry .mep-quick-contact-inquiry .mep-quick-caption{color:#4c6978;font-size:11.5px;margin:0 0 8px}
+html body #inquiry .mep-quick-contact-inquiry .mep-quick-links{display:flex;gap:8px;flex-wrap:wrap}
+html body #inquiry .mep-quick-contact-inquiry .mep-quick-link{flex:1 1 155px;min-width:0;min-height:58px;padding:9px 11px;background:#fff;color:#23495b;border:1px solid #d9e5e9;border-radius:12px;box-shadow:none}
+html body #inquiry .mep-quick-contact-inquiry .mep-quick-link:hover{background:#fff;border-color:#a8c1c8}
+html body #inquiry .mep-quick-contact-inquiry .mep-quick-link bdi{color:#547080;font-size:11px}
+html body #inquiry .inquiry-form{min-width:0;background:#fff;border:1px solid #dce7eb;border-radius:22px;padding:24px;box-shadow:0 8px 27px rgba(17,52,66,.065);color:var(--m9-ink)}
+html body #inquiry .inquiry-form .form-title{font-size:19px;line-height:1.5;margin:0 0 12px;color:var(--m9-ink)}
+html body #inquiry .spec-selection{padding:7px 10px;margin:4px 0 13px;font-size:11px;line-height:1.65;color:#54707f;background:#f0f6f8;border-color:#dce7eb;border-radius:10px}
+html body #inquiry .form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px 12px}
+html body #inquiry .field{min-width:0;gap:4px}
+html body #inquiry .field label{font-size:11.5px;line-height:1.6;color:#375969}
+html body #inquiry .field :is(input,select,textarea){width:100%;min-width:0;min-height:43px;padding:8px 11px;font-size:12px;line-height:1.6;background:#fbfcfd;border:1px solid #d8e4e9;border-radius:10px;color:#1c3e53;box-shadow:none}
+html body #inquiry .field textarea{min-height:80px;resize:vertical}
+html body #inquiry .field :is(input,select,textarea)::placeholder{color:#8497a3}
+html body #inquiry .field :is(input,select,textarea):focus-visible{outline:2px solid #af874e;outline-offset:1px}
+html body #inquiry .form-actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:14px}
+html body #inquiry .form-actions .button{min-height:43px;padding:9px 14px;font-size:11.5px}
+html body #inquiry .form-notice{font-size:11px;line-height:1.85;color:#587181;margin-top:11px}
+html body #inquiry .form-success{font-size:11px;margin-top:6px}
+
+/* Tablet and phone: all section content fits without horizontal overflow. */
+@media(max-width:980px){
+ html body .about-intro{width:min(660px,74%)}
+ html body #contact .contact-wrap,html body #inquiry .inquiry-layout{grid-template-columns:1fr;gap:12px}
+ html body #contact .contact-lead{padding:23px}
+ html body #inquiry .inquiry-copy{padding:21px}
+ html body #inquiry .inquiry-copy h2{font-size:clamp(1.8rem,4vw,2.35rem)}
+}
+@media(max-width:800px){
+ html body #distribution .global-layout{grid-template-columns:1fr;gap:18px}
+ html body #distribution .global-art.global-art-interactive{height:290px;min-height:290px;max-height:290px}
+ html body #distribution .globe-interactive-frame{width:min(72%,245px);max-width:245px}
+ html body #strengths .values-grid{grid-template-columns:1fr;gap:10px}
+ html body #strengths .value,html body #strengths .value:first-child{min-height:0;padding:15px 17px;display:grid;grid-template-columns:42px 1fr;column-gap:13px;align-items:start}
+ html body #strengths .value-icon{grid-column:1;grid-row:1/3;width:42px;height:42px}
+ html body #strengths .value h3{grid-column:2;margin:0 0 3px}
+ html body #strengths .value p{grid-column:2}
+ html body #contact .contact-info{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:640px){
+ html body .values-section.section,html body .global-section.section,html body .contact-section.section,html body .inquiry-section.section{padding-block:36px}
+ html body #strengths .section-heading h2,html body #distribution .section-heading h2,html body #contact h2,html body #inquiry h2{font-size:clamp(1.8rem,6.7vw,2.2rem);margin:7px 0 9px}
+ html body section.about-section.section{padding:38px 0;background-image:linear-gradient(180deg,rgba(250,252,251,.96) 0%,rgba(248,251,250,.95) 48%,rgba(245,249,248,.82) 100%),url('about-heritage.webp');background-position:center,center 60%}
+ html[lang^="en"] body section.about-section.section{background-image:linear-gradient(180deg,rgba(250,252,251,.96) 0%,rgba(248,251,250,.95) 48%,rgba(245,249,248,.82) 100%),url('about-heritage.webp')}
+ html body .about-composition{min-height:0}
+ html body .about-intro{width:100%}
+ html body #about-title{font-size:clamp(1.98rem,7.1vw,2.55rem);line-height:1.48;margin-bottom:10px}
+ html body .about-intro>p{font-size:12.5px;line-height:1.9;margin-bottom:7px}
+ html body .about-kicker{gap:10px;margin-bottom:10px}
+ html body .about-signature{font-size:8px}
+ html body .about-features{gap:6px;margin:11px 0}
+ html body .about-features span{font-size:10px;padding:6px 8px}
+ html body .about-stats{gap:6px;margin:0 0 13px}
+ html body .about-stat{padding:8px 7px;border-radius:10px}
+ html body .about-stat b{font-size:20px}
+ html body .about-stat span{font-size:9px;line-height:1.6;margin-top:3px}
+ html body #contact .contact-info{grid-template-columns:1fr;gap:8px}
+ html body #contact .contact-social{grid-column:auto}
+ html body #contact .contact-lead,html body #inquiry .inquiry-copy,html body #inquiry .inquiry-form{padding:19px;border-radius:18px}
+ html body #contact .contact-cell{padding:14px;gap:10px}
+ html body #inquiry .form-grid{grid-template-columns:1fr;gap:10px}
+ html body #inquiry .field.full{grid-column:auto}
+ html body #inquiry .inquiry-copy h2{font-size:clamp(1.85rem,7vw,2.1rem)}
+ html body #inquiry .mep-quick-contact-inquiry .mep-quick-link{flex-basis:100%;min-height:52px}
+ html body #inquiry .form-actions .button{width:100%;justify-content:center}
+ html body #distribution .global-art.global-art-interactive{height:264px;min-height:264px;max-height:264px}
+ html body #distribution .globe-interactive-frame{width:min(69%,215px);max-width:215px}
+}
+@media(prefers-reduced-motion:reduce){html body .values-section .value{transition:none}}
+/* Anchor navigation stays clear of the sticky mobile/desktop navigation bar. */
+html body #about,html body #strengths,html body #distribution,html body #contact,html body #inquiry{scroll-margin-top:100px}
+@media(max-width:640px){html body #about,html body #strengths,html body #distribution,html body #contact,html body #inquiry{scroll-margin-top:82px}}

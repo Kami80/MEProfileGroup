@@ -1,0 +1,122 @@
+/* Simple, consistent typography across Persian and English pages.
+   Persian: Vazirmatn | English: Inter. No decorative or serif font overrides. */
+html[lang^="fa"] body,
+html[lang^="fa"] body * {
+  font-family: "Vazirmatn", Tahoma, sans-serif !important;
+  letter-spacing: normal;
+}
+html[lang^="en"] body,
+html[lang^="en"] body * {
+  font-family: "Inter", Arial, sans-serif !important;
+  letter-spacing: normal;
+}
+html body { font-size: 16px; }
+html[lang^="fa"] body { line-height: 1.9; }
+html[lang^="en"] body { line-height: 1.75; }
+
+/* New clean steel hero: the image is the section background and copy stays editable/searchable HTML. */
+.hero{
+  background-image:linear-gradient(90deg,rgba(5,18,30,.10),rgba(5,18,30,.03)),url("hero-clean.webp")!important;
+  background-size:cover!important;
+  background-position:center center!important;
+  background-repeat:no-repeat!important;
+}
+.hero:before,.hero:after{display:none!important;}
+.hero-layout{
+  display:flex!important;
+  direction:ltr;
+  justify-content:flex-start;
+  align-items:center;
+  min-height:590px;
+  padding:76px 0 66px;
+  gap:0;
+}
+.hero-copy{
+  width:min(54%,660px);
+  max-width:660px;
+  direction:rtl;
+  text-align:right;
+  padding:0;
+  margin:0 auto 0 0;
+}
+html[lang^="en"] .hero-copy{direction:ltr;text-align:left;}
+.hero-visual{display:none!important;}
+.hero .eyebrow{background:rgba(8,24,39,.50);border:1px solid rgba(255,255,255,.20);border-radius:6px;padding:8px 14px;backdrop-filter:blur(7px);}
+.hero h1{max-width:650px;font-size:clamp(2.55rem,4.15vw,4.25rem);line-height:1.34;text-shadow:0 3px 24px rgba(0,0,0,.28);}
+html[lang^="fa"] .hero h1{line-height:1.5;}
+.hero p{max-width:620px;text-shadow:0 2px 15px rgba(0,0,0,.38);}
+.hero-buttons{margin-top:24px;}
+.hero-statline{background:rgba(5,19,31,.72);backdrop-filter:blur(12px);}
+
+/* Leadership portraits: first card is the right-most card in both language versions. */
+.leaders{direction:rtl;gap:16px;}
+.leader{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+  padding:18px 16px 22px;
+  overflow:hidden;
+}
+.leader-photo{
+  display:block;
+  width:100%;
+  height:230px;
+  object-fit:contain;
+  object-position:center bottom;
+  border-radius:14px;
+  margin:0 0 15px;
+  background:linear-gradient(145deg,#f4f5f2,#e7ecea 65%,#f8f8f4);
+  position:relative;
+  z-index:1;
+}
+.leader .index{align-self:flex-start;position:relative;z-index:1;}
+.leader strong{display:block;margin:8px 0 4px;font-size:18px;line-height:1.5;position:relative;z-index:1;}
+.leader>span:last-child{position:relative;z-index:1;}
+html[lang^="en"] .leader{direction:ltr;}
+
+/* Partner identity */
+.partner-item-logo{flex-direction:column;gap:8px;padding:14px 18px;}
+.partner-item-logo img{display:block;width:min(175px,70%);height:68px;object-fit:contain;}
+.partner-item-logo span{font-size:15px;line-height:1.5;}
+
+@media(max-width:1050px){
+  .hero-layout{min-height:550px;}
+  .hero-copy{width:58%;}
+  .leader-photo{height:205px;}
+}
+@media(max-width:800px){
+  .hero{background-position:31% center!important;}
+  .hero-layout{min-height:unset;padding:66px 0 46px;}
+  .hero-copy{width:100%;max-width:650px;padding:23px 20px;border-radius:16px;background:rgba(5,19,31,.66);backdrop-filter:blur(5px);}
+  .hero h1{font-size:clamp(2.2rem,7.5vw,3.3rem);}
+  .hero p{font-size:15px;}
+  .leader-photo{height:245px;}
+}
+@media(max-width:560px){
+  .hero{background-position:27% center!important;}
+  .hero-layout{padding:50px 0 34px;}
+  .hero-copy{padding:20px 16px;}
+  .hero h1{font-size:clamp(1.95rem,8vw,2.7rem);}
+  .hero-statline .container{grid-template-columns:repeat(2,minmax(0,1fr));}
+  .leader-photo{height:250px;}
+  .partner-item-logo img{height:60px;}
+}
+
+
+/* Premium strategic-partner identity cards */
+.partner-band{position:relative;isolation:isolate;overflow:hidden;padding:76px 0;background:linear-gradient(118deg,#f7f9fa 0%,#eef3f6 52%,#f6f7f4 100%);border-top:1px solid #e2e8ec;border-bottom:1px solid #e2e8ec;}
+.partner-band:before{content:"";position:absolute;z-index:-1;width:440px;height:440px;inset-inline-end:-190px;top:-260px;border:1px solid rgba(20,58,91,.08);border-radius:50%;box-shadow:0 0 0 34px rgba(20,58,91,.025),0 0 0 70px rgba(20,58,91,.018);}
+.partners-layout{grid-template-columns:minmax(220px,.72fr) minmax(0,1.8fr);gap:42px;}
+.partners-intro span{display:inline-flex;align-items:center;gap:10px;color:#a98245;font-size:11px;font-weight:800;letter-spacing:.12em;margin-bottom:13px;}
+.partners-intro span:before{content:"";width:26px;height:2px;background:#d3ad6e;}
+.partners-intro strong{display:block;color:#102842;font-size:clamp(22px,2.3vw,29px);line-height:1.55;font-weight:800;}
+.partner-list{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;}
+.partner-item.partner-item-logo{position:relative;min-width:0;min-height:206px;padding:26px 24px 20px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;text-align:center;border:1px solid #dfe6eb;border-radius:13px;background:rgba(255,255,255,.94);box-shadow:0 12px 32px rgba(11,33,57,.055);transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease;}
+.partner-item.partner-item-logo:before{content:"";position:absolute;top:0;inset-inline:28px;height:3px;border-radius:0 0 4px 4px;background:linear-gradient(90deg,#d3ad6e,#1c6c9d);opacity:.9;}
+.partner-item.partner-item-logo:hover{transform:translateY(-5px);border-color:#c4d1db;box-shadow:0 20px 42px rgba(11,33,57,.11);}
+.partner-item-logo img{display:block;width:min(100%,270px);height:116px;max-width:100%;max-height:none;object-fit:contain;}
+.partner-item-logo:first-child img{width:min(100%,205px);height:124px;}
+.partner-item-logo .partner-caption{display:inline-flex;align-items:center;justify-content:center;padding:5px 12px;border-radius:99px;background:#f2f5f6;color:#718092;font-size:10px;font-weight:700;letter-spacing:.08em;}
+@media(max-width:800px){.partner-band{padding:58px 0;}.partners-layout{grid-template-columns:1fr;gap:24px;}.partners-intro{max-width:520px;}}
+@media(max-width:560px){.partner-list{grid-template-columns:1fr;gap:14px;}.partner-item.partner-item-logo{min-height:180px;padding:22px 18px 18px;}.partner-item-logo img{height:100px;}.partner-item-logo:first-child img{height:110px;}}
