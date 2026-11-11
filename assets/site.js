@@ -25,7 +25,7 @@
     catch(err){const target=document.getElementById('prepared-copy');target.classList.remove('sr-only');target.setAttribute('aria-hidden','false');target.style.cssText='display:block;width:100%;min-height:190px;margin-top:14px;';target.value=val;target.focus();target.select();try{document.execCommand('copy');status.textContent=fa?'متن استعلام آماده و انتخاب شد.':'Inquiry prepared and selected for copying.';}catch(e){status.textContent=fa?'متن استعلام را انتخاب و کپی کنید.':'Select and copy the prepared inquiry.';}}
   });
   document.getElementById('email-inquiry')?.addEventListener('click',()=>{
-    const link=(document.body.dataset.whatsapp||'https://wa.me/989359995122')+'?text='+encodeURIComponent(makeMessage());
+    const link=(document.body.dataset.whatsapp||'https://wa.me/989379995122')+'?text='+encodeURIComponent(makeMessage());
     const tab=window.open(link,'_blank','noopener,noreferrer');
     if(!tab){window.location.href=link;}
     status.textContent=fa?'واتس‌اپ باز می‌شود؛ پیام را بررسی و ارسال کنید.':'WhatsApp opens with your draft; review and send the message there.';
