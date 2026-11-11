@@ -81,7 +81,7 @@ function draw(conf){
  const visible=list.slice((conf.page-1)*conf.pageSize,conf.page*conf.pageSize);
  const frag=document.createDocumentFragment();for(const item of visible){const tr=document.createElement('tr');
   const name=cell(tr,null);const size=document.createElement('b');size.className='mep-size-title';size.textContent=item.shown;name.append(size);const cat=document.createElement('small');cat.className='mep-price-category';cat.textContent=CAT[item.category];name.append(cat);
-  const price=cell(tr,null);const val=document.createElement('span');val.className=item.price!==null?'mep-price-number':'mep-price-no-number';val.textContent=item.price!==null?fmt.format(item.price):noPrice;price.append(val);
+  const price=cell(tr,null);const val=document.createElement('span');val.className=item.price!==null?'mep-price-number':'mep-price-no-number';val.textContent=item.price!==null?fmt.format(item.price):noPrice;price.append(val);if(item.price!==null){const currency=document.createElement('small');currency.className='mep-price-currency';currency.textContent=t('ریال','Rial');currency.setAttribute('aria-label',t('واحد پول: ریال','Currency: Iranian Rial (IRR)'));price.append(currency);}
   const action=cell(tr,null);const b=document.createElement('button');b.type='button';b.className='mep-price-quote spec-action';b.dataset.product=CAT[item.category];b.dataset.size=item.shown;
   b.textContent=t('درخواست استعلام ↗','Request a quote ↗');b.setAttribute('aria-label',t('استعلام ','Quote for ')+item.shown);action.append(b);frag.append(tr);
  }
