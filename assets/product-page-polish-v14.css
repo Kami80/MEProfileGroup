@@ -326,47 +326,12 @@ html[lang^="fa"] .detail-layout h2{letter-spacing:0}
 .contact-social{background:#fff}
 .contact-lead .button{border-radius:999px;min-height:49px}
 
-/* Quotation section: clean white canvas and clearly separated form. */
-.inquiry-section{
-  position:relative;
-  overflow:hidden;
-  color:#173b49!important;
-  background:#fff!important;
+/* Product inquiry uses exactly the home page's shared styles. */
+html body section#inquiry.inquiry-section {
+  background: #ffffff !important;
+  border-top: 1px solid #f0f2f3;
+  border-bottom: 1px solid #f0f2f3;
 }
-.inquiry-section::before,.inquiry-section::after{opacity:.35}
-.inquiry-copy{
-  padding:clamp(24px,3vw,36px);
-  border:1px solid #e2e9ec;
-  border-radius:26px;
-  background:linear-gradient(145deg,#fff,#f9fbfb);
-  box-shadow:0 14px 36px rgba(13,48,62,.055);
-}
-.inquiry-copy .eyebrow{color:#a17a43}
-.inquiry-copy h2{color:#153b49!important;font-size:clamp(1.9rem,3.2vw,3rem);line-height:1.4}
-.inquiry-copy h2 em{color:#c59a5b!important}
-.inquiry-copy>p{color:#627984!important;font-size:13.5px;line-height:2}
-.inquiry-mini{background:#fff8ec;border:1px solid #f0dfc1;color:#8a6b3d}
-.inquiry-form{
-  padding:clamp(22px,3vw,34px);
-  border:1px solid #e1e8eb;
-  border-radius:26px;
-  background:#f5f7f8;
-  box-shadow:0 16px 40px rgba(13,48,62,.07),inset 0 1px #fff;
-  color:#183c49;
-}
-.inquiry-form .form-title{color:#183e4d;font-size:21px}
-.inquiry-form .field label{color:#456571}
-.inquiry-form .field :is(input,select,textarea){border:1px solid #dfe7ea;border-radius:12px;background:#fff;color:#1b3e4b}
-.inquiry-form .field :is(input,select,textarea):focus{border-color:#c6a16a;box-shadow:0 0 0 4px rgba(214,177,116,.16)}
-.inquiry-form .form-notice{color:#6d8189}
-.inquiry-form .form-actions{gap:10px;flex-wrap:wrap}
-.inquiry-form .form-actions .button{border-radius:999px;min-height:48px}
-.inquiry-form .button-dark{background:linear-gradient(130deg,#164a59,#0b2c3a);color:#fff}
-.inquiry-form .form-success{color:#18734e}
-.mep-quick-contact-inquiry{background:#f5f8f9;border:1px solid #e3eaed}
-.mep-quick-contact-inquiry .mep-quick-caption{color:#6a8089}
-.mep-quick-contact-inquiry .mep-quick-link{background:#fff;border-color:#e2e9ec;color:#1c4554}
-.mep-quick-contact-inquiry .mep-quick-link bdi{color:#536d78}
 
 /* Mobile and tablet: preserve the homepage's calm, compact responsive behavior. */
 @media(max-width:1050px){
@@ -384,7 +349,7 @@ html[lang^="fa"] .detail-layout h2{letter-spacing:0}
   .detail-layout{grid-template-columns:1fr;gap:25px}
   .detail-side{position:static;order:2}
   .seo-spec-facts{grid-template-columns:repeat(3,minmax(0,1fr))}
-  .contact-wrap,.inquiry-layout{grid-template-columns:1fr;gap:20px}
+  .contact-wrap{grid-template-columns:1fr;gap:20px}
   .contact-info{grid-template-columns:repeat(2,minmax(0,1fr))}
   .contact-social{grid-column:1/-1}
 }
@@ -431,16 +396,12 @@ html[lang^="fa"] .detail-layout h2{letter-spacing:0}
   .related-section .product-content h3{font-size:13px;line-height:1.55}
   .related-section .product-content p{font-size:10.5px;line-height:1.75;margin-bottom:8px}
   .related-section .text-link{font-size:10px}
-  .contact-section,.inquiry-section{padding:48px 0}
-  .contact-lead,.inquiry-copy,.inquiry-form{padding:21px 17px;border-radius:21px}
-  .contact-lead h2,.inquiry-copy h2{font-size:clamp(1.65rem,6vw,2.2rem)}
+  .contact-section{padding:48px 0}
+  .contact-lead{padding:21px 17px;border-radius:21px}
+  .contact-lead h2{font-size:clamp(1.65rem,6vw,2.2rem)}
   .contact-info{grid-template-columns:1fr;gap:9px}
   .contact-cell{padding:17px;border-radius:17px}
   .contact-social{grid-column:auto}
-  .inquiry-form .form-grid{grid-template-columns:1fr}
-  .inquiry-form .field.full{grid-column:auto}
-  .inquiry-form .form-actions{display:grid;grid-template-columns:1fr}
-  .inquiry-form .form-actions .button{width:100%}
 }
 @media(prefers-reduced-motion:reduce){
   .detail-hero .button-primary,.spec-chip.spec-action,.related-section .product-card{transition:none!important}
