@@ -133,3 +133,104 @@ html[lang=fa] .mep-contact-head h2, html[lang=fa] .mep-contact-head p{max-width:
 .contact-social .mep-social-rubika-channel{font-weight:700}
 .footer-social.footer-rubika-channel{display:block;width:fit-content;margin-top:9px;text-decoration:none}
 .footer-social.footer-rubika-channel:hover,.contact-social .mep-social-rubika-channel:hover{text-decoration:underline}
+
+/* === Viewport-safe mobile contact drawer fix · 2026-11-14 ===
+   Moves the panel out of the button's coordinate system; IDs intentionally
+   outrank legacy product/homepage CSS declarations. */
+#mep-contact-backdrop {
+  position:fixed; inset:0; z-index:114; pointer-events:none;
+  opacity:0; visibility:hidden;
+  background:rgba(5,20,31,.48);
+  -webkit-backdrop-filter:blur(4px);
+  backdrop-filter:blur(4px);
+  transition:opacity .25s ease, visibility .25s ease;
+}
+#mep-contact-backdrop.is-open {opacity:1;visibility:visible;pointer-events:auto}
+#mep-contact-panel {
+  box-sizing:border-box;
+  position:fixed;
+  z-index:118;
+  left:auto;
+  right:max(18px,env(safe-area-inset-right));
+  bottom:calc(96px + env(safe-area-inset-bottom));
+  top:auto;
+  width:min(356px,calc(100vw - 30px));
+  max-width:calc(100vw - 24px);
+  max-height:min(700px,calc(100dvh - 118px));
+  overflow-x:hidden;
+  overflow-y:auto;
+  overscroll-behavior:contain;
+  -webkit-overflow-scrolling:touch;
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+  transform:translateY(12px) scale(.97);
+  transform-origin:bottom right;
+  scrollbar-width:thin;
+  scrollbar-color:rgba(73,102,121,.3) transparent;
+}
+#mep-contact-panel.is-open {
+  opacity:1;visibility:visible;pointer-events:auto;
+  transform:translateY(0) scale(1);
+}
+#mep-contact-panel .mep-contact-head {
+  position:sticky; top:0; z-index:4;
+  background:linear-gradient(180deg,#fcfeff 0%,rgba(247,251,253,.98) 100%);
+  border-bottom:1px solid rgba(212,225,233,.74);
+}
+#mep-contact-panel .mep-contact-close {
+  flex:0 0 36px;
+  width:36px;height:36px;
+  border:1px solid rgba(47,87,110,.19);
+  background:#edf4f7;
+  color:#163e51;
+}
+#mep-contact-panel .mep-contact-close:focus-visible {
+  outline:3px solid #6ac0df;outline-offset:2px;
+}
+@media(min-width:761px) {
+  #mep-contact-backdrop {display:none}
+}
+@media(max-width:760px) {
+  html.mep-contact-active,html.mep-contact-active body {overflow:hidden}
+  #mep-contact-panel {
+    left:auto;
+    right:max(12px,env(safe-area-inset-right));
+    bottom:calc(78px + env(safe-area-inset-bottom));
+    top:auto;
+    width:min(440px,calc(100vw - 24px));
+    max-width:calc(100vw - 24px);
+    max-height:min(680px,calc(100dvh - 100px - env(safe-area-inset-bottom)));
+    border-radius:22px;
+    padding:0;
+    box-shadow:0 22px 72px rgba(3,19,30,.37),0 0 0 1px rgba(255,255,255,.4) inset;
+  }
+  #mep-contact-panel .mep-contact-head {
+    display:flex;align-items:flex-start;justify-content:space-between;
+    gap:10px;padding:15px 15px 13px;
+  }
+  #mep-contact-panel .mep-contact-head h2 {font-size:18px;line-height:1.5;margin:4px 0}
+  #mep-contact-panel .mep-contact-head p {font-size:11px;line-height:1.7}
+  #mep-contact-panel .mep-contact-channels {padding:10px 12px 4px;gap:8px}
+  #mep-contact-panel .mep-contact-channel {min-height:56px;padding:9px 11px;gap:10px}
+  #mep-contact-panel .mep-contact-footer {margin:10px 12px 13px}
+  #mep-contact-dock.is-open .mep-contact-fab {opacity:0;pointer-events:none;transform:scale(.7)}
+}
+@media(max-width:420px) {
+  #mep-contact-panel {
+    right:max(9px,env(safe-area-inset-right));
+    width:calc(100vw - 18px);
+    max-width:calc(100vw - 18px);
+    bottom:calc(74px + env(safe-area-inset-bottom));
+    max-height:calc(100dvh - 94px - env(safe-area-inset-bottom));
+    border-radius:19px;
+  }
+  #mep-contact-panel .mep-contact-head {padding:13px 13px 11px}
+  #mep-contact-panel .mep-contact-head h2 {font-size:16px}
+  #mep-contact-panel .mep-contact-channels {padding:8px 9px 3px;gap:7px}
+  #mep-contact-panel .mep-contact-channel {min-height:52px;padding:8px 10px}
+  #mep-contact-panel .mep-contact-footer {margin:8px 9px 10px}
+}
+@media(prefers-reduced-motion:reduce) {
+  #mep-contact-panel,#mep-contact-backdrop {transition:none!important}
+}
