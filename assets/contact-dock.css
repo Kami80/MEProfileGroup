@@ -290,3 +290,16 @@ html[lang=fa] .mep-contact-head h2, html[lang=fa] .mep-contact-head p{max-width:
   #mep-contact-panel .mep-contact-channel .mep-contact-icon { width: 42px; height: 42px; flex-basis: 42px; }
   #mep-contact-panel .mep-contact-footer { margin: 8px 12px 12px; }
 }
+
+/* Contact drawer above the global sticky header.
+   The site header is intentionally z-index:1000!important in mep-premium-2026.css.
+   Keep this modal layer independent of the floating action button, which remains
+   beneath the backdrop while the drawer is open. Applies to desktop and mobile. */
+html body #mep-contact-backdrop {
+  position: fixed;
+  z-index: 100100 !important;
+}
+html body #mep-contact-panel {
+  position: fixed;
+  z-index: 100110 !important;
+}
