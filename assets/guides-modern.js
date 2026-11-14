@@ -11,7 +11,7 @@
       var lines=[fa?'سلام، برای محصول زیر درخواست استعلام دارم:':'Hello, I would like a quotation for the following product:'];
       ['product','dimensions','thickness','quantity','length','destination','notes'].forEach(function(key){var value=String(data.get(key)||'').trim();if(value)lines.push(labels[key]+': '+value);});
       lines.push(fa?'لطفاً قیمت و شرایط تأمین را اعلام فرمایید.':'Please advise the current price and supply terms.');
-      var url='https://wa.me/989359995122?text='+encodeURIComponent(lines.join('\n'));
+      var url='https://wa.me/989379995122?text='+encodeURIComponent(lines.join('\n'));
       var status=form.querySelector('.guide-form-status');
       if(status)status.textContent=fa?'در حال باز کردن واتس‌اپ…':'Opening WhatsApp…';
       window.open(url,'_blank','noopener');

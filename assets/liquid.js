@@ -4,25 +4,16 @@
   const root = document.documentElement;
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const finePointer = window.matchMedia('(hover:hover) and (pointer:fine)');
-  const fa = root.lang.toLowerCase().startsWith('fa');
   const header = document.querySelector('.site-header');
   const nav = document.querySelector('.main-nav');
   const menu = document.querySelector('.mobile-menu');
   const menuToggle = document.querySelector('.menu-toggle');
 
-  const topBtn = document.createElement('button');
-  topBtn.className = 'liquid-top';
-  topBtn.type = 'button';
-  topBtn.textContent = '↑';
-  topBtn.setAttribute('aria-label', fa ? 'بازگشت به بالای صفحه' : 'Back to top');
-  topBtn.setAttribute('title', fa ? 'بالای صفحه' : 'Back to top');
-  document.body.appendChild(topBtn);
-  topBtn.addEventListener('click', () => window.scrollTo({ top:0, behavior: reduceMotion.matches ? 'instant' : 'smooth' }));
+  // The single back-to-top button is managed by mep-premium-2026.js.
 
   let scrollPending = false;
   function refreshScroll() {
     header?.classList.toggle('header-scrolled', window.scrollY > 28);
-    topBtn.classList.toggle('is-visible', window.scrollY > 600);
     scrollPending = false;
   }
   window.addEventListener('scroll', () => {
