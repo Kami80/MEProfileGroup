@@ -1,6 +1,6 @@
 /* MEProfile Group | Header contrast & responsive visibility fix | 2026-11-14
    Prevent the light scrolled header from inheriting light navigation text.
-   Keep the existing brand assets, nav behavior, buttons and 3D features. */
+   Keep the existing brand assets, nav behavior and buttons. */
 .site-header.nav-refined,
 .site-header.nav-refined.header-scrolled,
 .site-header.nav-refined.mep-scrolled,
