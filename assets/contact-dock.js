@@ -34,7 +34,7 @@
     backdrop.classList.toggle('is-open', next);
     document.documentElement.classList.toggle('mep-contact-active', next && isMobile());
     panel.setAttribute('aria-hidden', String(!next));
-    panel.setAttribute('aria-modal', String(next && isMobile()));
+    panel.setAttribute('aria-modal', String(next));
     toggle.setAttribute('aria-expanded', String(next));
     toggle.setAttribute('aria-label', next ? toggle.dataset.closeLabel : toggle.dataset.openLabel);
     const hadPanelFocus = !next && panel.contains(document.activeElement);
@@ -60,7 +60,7 @@
     if (event.key === 'Escape') {
       event.preventDefault();
       setOpen(false, true);
-    } else if (event.key === 'Tab' && isMobile()) {
+    } else if (event.key === 'Tab') {
       // Keep keyboard users inside the modal sheet while it is open.
       const selectors = 'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])';
       const items = [...panel.querySelectorAll(selectors)].filter(el => !el.inert && el.getClientRects().length);
@@ -77,7 +77,7 @@
   window.addEventListener('resize', () => {
     if (open) {
       document.documentElement.classList.toggle('mep-contact-active', isMobile());
-      panel.setAttribute('aria-modal', String(isMobile()));
+      panel.setAttribute('aria-modal', 'true');
     }
   });
 })();
